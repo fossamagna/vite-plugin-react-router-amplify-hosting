@@ -1,0 +1,53 @@
+{
+  "name": "vite-plugin-react-router-amplify-hosting",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react-router",
+    "vite-plugin",
+    "amplify"
+  ],
+  "license": "MIT",
+  "author": "Masahiko Murakami <fossamagna2@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fossamagna/vite-plugin-react-router-amplify-hosting",
+    "directory": "packages/vite-plugin-react-router-amplify-hosting"
+  },
+  "bugs": {
+    "url": "https://github.com/fossamagna/vite-plugin-react-router-amplify-hosting/issues"
+  },
+  "homepage": "https://github.com/fossamagna/vite-plugin-react-router-amplify-hosting/blob/main/README.md",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "release": "npm test && npm run build && && changeset tag && npm publish",
+    "format": "biome format --write ./src",
+    "lint": "biome check --write ./src",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "peerDependencies": {
+    "vite": ">=6.0.0"
+  }
+}

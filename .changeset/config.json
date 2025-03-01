@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "fossamagna/vite-plugin-react-router-amplify-hosting"
+      "repo": "fossamagna/react-router-amplify"
     }
   ],
   "commit": false,

@@ -14,20 +14,20 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-
+      - uses: pnpm/action-setup@v4
       - name: Setup Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
+          cache: "pnpm"
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install -frozen-lockfile
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run release
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

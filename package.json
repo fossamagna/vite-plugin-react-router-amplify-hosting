@@ -15,7 +15,7 @@
   "homepage": "https://github.com/fossamagna/vite-plugin-react-router-amplify-hosting/blob/main/README.md",
   "packageManager": "pnpm@10.5.2",
   "scripts": {
-    "release": "pnpm test && pnpm --if-present --recursive build && pnpm publish --recursive",
+    "release": "pnpm test && pnpm --if-present --recursive build && changeset publish",
     "format": "biome format --write ./src",
     "lint": "biome check --write ./src",
     "test": "vitest --run",
